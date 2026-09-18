@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoang Truong's Dorm Room Data Center</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #00FF00;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 40px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #00FF00;
+            border-bottom: 1px solid #00FF00;
+            padding-bottom: 10px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .prompt::before {
+            content: "hoangtruong@lenovo-y50:~$ ";
+            color: #00FF00;
+            font-weight: bold;
+        }
+        .output {
+            color: #d3d7cf;
+            margin-bottom: 20px;
+        }
+        .blink {
+            animation: blinker 1s linear infinite;
+        }
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>[ SYSTEM ONLINE ] - Dorm Room Data Center</h1>
+        
+        <p class="prompt">cat /etc/os-release | grep PRETTY_NAME</p>
+        <p class="output">PRETTY_NAME="Ubuntu 22.04 LTS"</p>
+        
+        <p class="prompt">nginx -v</p>
+        <p class="output">nginx version: nginx/1.18.0 (Ubuntu)</p>
+        
+        <p class="prompt">cat about_me.txt</p>
+        <p class="output">
+            Powered by an old Lenovo Y50-70, Ubuntu, Nginx, and ZERO budget. <br><br>
+            This server is hosted directly from my university dorm room in Vietnam. No fancy cloud servers yet. Just pure Linux, local networking, and a Cloudflare Tunnel to expose this machine to the world via Namecheap domain.
+        </p>
+        
+        <p class="prompt"><span class="blink">_</span></p>
+    </div>
+</body>
+</html>
